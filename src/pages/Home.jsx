@@ -13,7 +13,7 @@ const Home = () => {
             <Navbar></Navbar>
             <div className='grid grid-cols-1 gap-1  lg:grid-cols-4'>
                 <LeftSidebar></LeftSidebar>
-                <Newsbar></Newsbar>
+                <Newsbar heading= {"Dragon News Home"}></Newsbar>
                 <RightSidebar></RightSidebar>
             </div>
 		</div>

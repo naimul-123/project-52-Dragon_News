@@ -24,6 +24,7 @@ export default {
       'dark-silver': '#706F6F',
       'quick-silver': '#9F9F9F',
       'anti-flash-white': '#F3F3F3',
+      'platinum': '#E7E7E7',
       
     },
     extend: {},
