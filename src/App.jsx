@@ -1,14 +1,11 @@
-
+import { Outlet } from 'react-router-dom';
 
 function App() {
-  
-  
-
-  return (
-    <div>
-      <h1 className="text-5xl font-bold text-center text-red-500">React dummy project</h1>
-    </div>
-  )
+	return (
+		<div className='font-poppins max-w-screen-2xl px-60 py-10 mx-auto'>
+			<Outlet></Outlet>
+		</div>
+	);
 }
 
-export default App
+export default App;
