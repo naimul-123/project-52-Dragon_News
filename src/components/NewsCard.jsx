@@ -1,13 +1,13 @@
 import { FaBookmark, FaEye } from 'react-icons/fa';
 import { FaShareAlt } from 'react-icons/fa';
-import newsimg from '../assets/editorsInsight1.png';
 import { Link } from 'react-router-dom';
 import { LinearGradient } from 'react-text-gradients';
+import PropTypes from 'prop-types';
 
-const NewsCard = ({ singleNews }) => {
+const NewsCard = ({ singleNews, isDetails }) => {
 	const { author, title, details, image_url, _id } = singleNews
 	return (
-		<div>
+		<div className=''>
 			<div className='flex items-center justify-between p-4 bg-anti-flash-white'>
 				<div className='flex gap-2 items-center'>
 					<div
@@ -44,7 +44,7 @@ const NewsCard = ({ singleNews }) => {
 					/>
 				</div>
 				<div>
-					{details.length > 200 ?
+					{!isDetails ?
 						<p>{details.slice(0, 200)}
 							<Link to={`/news/${_id}`} className='font-semibold text-lg'>
 								<LinearGradient gradient={['to left', '#FF8C47, #F75B5F']}>
@@ -93,4 +93,9 @@ const NewsCard = ({ singleNews }) => {
 	);
 };
 
+NewsCard.propTypes = {
+	singleNews: PropTypes.object.isRequired,
+	isDetails: PropTypes.bool
+
+}
 export default NewsCard;

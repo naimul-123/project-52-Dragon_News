@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { FaCircleUser } from 'react-icons/fa6';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
@@ -11,8 +11,8 @@ const Navbar = () => {
 
 	const handlelogOut = () => {
 		logOut()
-			.then(() => console.log(user))
-			.catch();
+			.then()
+			.catch(error => console.log(error));
 		// console.log(user)
 
 	}

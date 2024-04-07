@@ -1,6 +1,6 @@
 
 import NewsCard from "./NewsCard";
-
+import PropTypes from 'prop-types';
 
 const Newsbar = ({ news }) => {
     // console.log(news)
@@ -11,5 +11,7 @@ const Newsbar = ({ news }) => {
         </div>
     );
 };
-
+Newsbar.propTypes = {
+    news: PropTypes.array.isRequired
+}
 export default Newsbar;
