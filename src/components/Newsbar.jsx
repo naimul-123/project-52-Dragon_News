@@ -1,14 +1,13 @@
-import { useContext } from "react";
-import { NewsContext } from "../App";
+
 import NewsCard from "./NewsCard";
 
 
-const Newsbar = () => {
-    const newsLists = useContext(NewsContext)
-    console.log(newsLists);
+const Newsbar = ({ news }) => {
+    // console.log(news)
     return (
         <div className=" lg:col-span-2 ">
-            <NewsCard></NewsCard>
+            {news.map((singleNews) => <NewsCard key={singleNews._id} singleNews={singleNews}></NewsCard>)}
+
         </div>
     );
 };

@@ -19,7 +19,7 @@ const LeftSidebar = () => {
 		loadData();
 	}, []);
 
-	console.log(newsCatagories);
+	// console.log(newsCatagories);
 
 	return (
 		<div className='space-y-3'>
@@ -27,11 +27,11 @@ const LeftSidebar = () => {
 			<div>
 				<h3 className='text-black-olive bg-platinum py-4 px-8 text-center font-semibold text-xl'>
 					National News
-                </h3>
-                <ul>
+				</h3>
+				<ul>
 
-                    {newsCatagories.map(catagory => <li className='pl-12 text-lg my-4' key={catagory.id}><Link className='link link-hover' to={`catagory/${catagory.id}`}>{ catagory.name }</Link></li>)}
-                </ul>
+					{newsCatagories.map(catagory => <li className='pl-12 text-lg my-4' key={catagory.id}><Link className='link link-hover' to={`catagory/${catagory.id}`}>{catagory.name}</Link></li>)}
+				</ul>
 			</div>
 		</div>
 	);
